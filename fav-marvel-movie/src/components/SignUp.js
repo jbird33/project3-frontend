@@ -31,7 +31,7 @@ class SignUp extends Component {
                             <label for="password">Password: </label><input type="password" name="password" placeholder="password" /><br></br>
                             <label for="email">Email: </label><input type="text" name="email" placeholder="email" /><br></br>
                             <label for="favMovie">Favorite MCU Movie: </label><input type="text" name="favMovie" placeholder="favorite movie" /><br></br>
-                            <input type="submit" value="Login" />
+                            <input type="submit" value="Sign Up" />
                         </fieldset>
 
                     </form>

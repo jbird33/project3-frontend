@@ -17,7 +17,7 @@ class UserProfile extends Component {
         }
     }
 
-    
+
 
     render() {
         return (
@@ -25,7 +25,7 @@ class UserProfile extends Component {
                 <div className="navigation">
                     <nav>
                         <Link to="/">Homepage</Link>
-                        <h1>Welcome, {this.props.name} </h1>
+                        <h1>Welcome, {this.props.user.name} </h1>
                     </nav>
                 </div>
 

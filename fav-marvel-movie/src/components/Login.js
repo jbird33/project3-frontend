@@ -22,6 +22,7 @@ class Login extends Component {
         }))
     }
 
+    // Need the URL localhost:3000 inserted here to send the information over to the profile page
     handleSubmit = (event) => {
         event.preventDefault()
 
@@ -29,6 +30,7 @@ class Login extends Component {
             .then(response => {
                 console.log("Logged In User!!")
                 console.log(response)
+                // Not sure what below does or where this came from response.user.user.id  
                 this.props.history.push(`/profile/${response.user.user.id}`)
             })
             .catch(err => {
