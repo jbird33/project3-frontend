@@ -25,8 +25,8 @@ class Login extends Component {
     // Need the URL localhost:3000 inserted here to send the information over to the profile page
     handleSubmit = (event) => {
         event.preventDefault()
-
-        axios.get("", this.state.user)
+        // Not sure if this is a post or a get here...
+        axios.post("", this.state.user)
             .then(response => {
                 console.log("Logged In User!!")
                 console.log(response)

@@ -20,6 +20,8 @@ function App() {
       <Route path="/profile/:id" render={(props) => <UserProfile {...props}/> } />
 
       
+
+      
     </div>
   );
 }
