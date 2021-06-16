@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import EditProfile from "./EditProfile";
+import Movies from "./Movies"
 
 class UserProfile extends Component {
     constructor(props) {
@@ -55,23 +56,36 @@ class UserProfile extends Component {
         .then(response => {
             console.log("Deleting this User")
             //Redirect to homepage
+            this.props.history.push('/')
         })
     }
 
-    render() {
+    render(){
+        console.log(this.state.user)
+        // Below is so I don't have to rewrite this.state every time
+        const user = this.state.user
         return (
             <div>
                 <div className="navigation">
                     <nav>
                         <Link to="/">Homepage</Link>
-                        <h1>Profile Page</h1>
-                        {/* <h1>Welcome, {this.props.user.name} </h1> */}
+
+                        <h1>Welcome True Believer: User Name Here! </h1> 
+                        {/* Will have this: {this.props.user.name} inside */}
                     </nav>
                 </div>
 
                 <div className="body">
 
-                    <EditProfile />
+                  
+                <Link to="/movies"><li>MCU Movie List</li></Link>    
+
+                    <EditProfile 
+                    user={this.state.user}
+                    handleChange={this.handleChange}
+                    handleSubmit={this.handleSubmit}
+                    handleDelete={this.handleDelete}
+                    />
 
                 </div>
             </div>

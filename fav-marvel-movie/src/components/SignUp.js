@@ -6,10 +6,43 @@ class SignUp extends Component {
     constructor(props) {
         super(props);
         this.state = {
-
+            user: {
+                name: "",
+                username: "",
+                password: "",
+                email: ""
+            }
         }
     }
 
+//--------------------------------------------------------------
+
+    handleChange = (event) => {
+        this.setState(prevState => ({
+            user: {
+                ...prevState.user,
+                [event.target.name]: event.target.value
+            }
+        }))
+    }
+
+//----------------------------------------------------------------
+
+    handleSubmit = (event) => {
+        event.preventDefault()
+
+        axios.post("", this.state.user)
+            .then(response => {
+                console.log("Creating Profile!")
+                console.log(response)
+                // Not sure what below does or where this came from response.user.user.id  
+                this.props.history.push(`/profile/${response.user.user.id}`)
+            })
+            .catch(err => {
+                console.log(err)
+            })
+    }
+//------------------------------------------------------------------
 
     render() {
         return (
@@ -23,14 +56,18 @@ class SignUp extends Component {
                 </div>
 
                 <div className="body">
-                <form>
+                    <form onSubmit={this.handleSubmit}>
                         <fieldset>
                             <legend>Sign Up for Marvel Movie Mania!</legend><br></br>
-                            <label for="name">Name: </label><input type="text" name="name" placeholder="name" /><br></br>
-                            <label for="username">Username: </label><input type="text" name="username" placeholder="username" /><br></br>
-                            <label for="password">Password: </label><input type="password" name="password" placeholder="password" /><br></br>
-                            <label for="email">Email: </label><input type="text" name="email" placeholder="email" /><br></br>
-                            
+                            <label for="name">Name: </label>
+                            <input onChange={this.handleChange} type="text" name="name" placeholder="name" /><br></br>
+                            <label for="username">Username: </label>
+                            <input onChange={this.handleChange} type="text" name="username" placeholder="username" /><br></br>
+                            <label for="password">Password: </label>
+                            <input onChange={this.handleChange} type="password" name="password" placeholder="password" /><br></br>
+                            <label for="email">Email: </label>
+                            <input onChange={this.handleChange} type="text" name="email" placeholder="email" /><br></br>
+
                             <input type="submit" value="Sign Up" />
                         </fieldset>
 
