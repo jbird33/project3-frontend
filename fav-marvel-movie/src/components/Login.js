@@ -26,7 +26,7 @@ class Login extends Component {
     handleSubmit = (event) => {
         event.preventDefault()
         // This is a post and not a get to the backend
-        axios.post("", this.state.user)
+        axios.post("http://localhost:3001/login", this.state.user)
             .then(response => {
                 console.log("Logged In User!!")
                 console.log(response)

@@ -31,7 +31,7 @@ class SignUp extends Component {
     handleSubmit = (event) => {
         event.preventDefault()
 
-        axios.post("", this.state.user)
+        axios.post("http://localhost:3001/signup", this.state.user)
             .then(response => {
                 console.log("Creating Profile!")
                 console.log(response)
@@ -60,13 +60,13 @@ class SignUp extends Component {
                     <form onSubmit={this.handleSubmit}>
                         <fieldset>
                             <legend>Sign Up for Marvel Movie Mania!</legend><br></br>
-                            <label for="name">Name: </label>
+                            <label htmlFor="name">Name: </label>
                             <input onChange={this.handleChange} type="text" name="name" placeholder="name" /><br></br>
-                            <label for="username">Username: </label>
+                            <label htmlFor="username">Username: </label>
                             <input onChange={this.handleChange} type="text" name="username" placeholder="username" /><br></br>
-                            <label for="password">Password: </label>
+                            <label htmlFor="password">Password: </label>
                             <input onChange={this.handleChange} type="password" name="password" placeholder="password" /><br></br>
-                            <label for="email">Email: </label>
+                            <label htmlFor="email">Email: </label>
                             <input onChange={this.handleChange} type="text" name="email" placeholder="email" /><br></br>
 
                             <input type="submit" value="Sign Up" />
