@@ -26,7 +26,7 @@ class Login extends Component {
     handleSubmit = (event) => {
         event.preventDefault()
         // This is a post and not a get to the backend
-        axios.post("http://localhost:3001/login", this.state.user)
+        axios.post("https://localhost:3001/users/login", this.state.user)
             .then(response => {
                 console.log("Logged In User!!")
                 console.log(response)
@@ -56,8 +56,8 @@ class Login extends Component {
                     <form onSubmit={this.handleSubmit}>
                         <fieldset>
                             <legend>Login to See Your Favorite Movie!</legend><br></br>
-                            <label for="username">Username: </label><input onChange={this.handleChange} type="text" name="username" placeholder="username" /> <br></br>
-                            <label for="password">Password: </label><input onChange={this.handleChange} type="password" name="password" placeholder="password" /><br></br><br></br>
+                            <label htmlFor="username">Username: </label><input onChange={this.handleChange} type="text" name="username" placeholder="username" /> <br></br>
+                            <label htmlFor="password">Password: </label><input onChange={this.handleChange} type="password" name="password" placeholder="password" /><br></br><br></br>
                             <input type="submit" value="Login" />
                         </fieldset>
 

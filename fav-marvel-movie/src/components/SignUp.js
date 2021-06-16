@@ -31,7 +31,7 @@ class SignUp extends Component {
     handleSubmit = (event) => {
         event.preventDefault()
 
-        axios.post("http://localhost:3001/signup", this.state.user)
+        axios.post("https://localhost:3001/users/signup", this.state.user)
             .then(response => {
                 console.log("Creating Profile!")
                 console.log(response)
