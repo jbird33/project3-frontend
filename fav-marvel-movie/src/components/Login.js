@@ -25,12 +25,13 @@ class Login extends Component {
     // Need the URL localhost:3000 inserted here to send the information over to the profile page
     handleSubmit = (event) => {
         event.preventDefault()
-        // Not sure if this is a post or a get here...
+        // This is a post and not a get to the backend
         axios.post("", this.state.user)
             .then(response => {
                 console.log("Logged In User!!")
                 console.log(response)
-                // Not sure what below does or where this came from response.user.user.id  
+                // Not sure what below does or where this came from response.user.user.id 
+                //${response.user.user.id} may change depending on the console.log(response) 
                 this.props.history.push(`/profile/${response.user.user.id}`)
             })
             .catch(err => {

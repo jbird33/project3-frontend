@@ -44,7 +44,7 @@ class UserProfile extends Component {
     handleSubmit = (event) => {
         event.preventDefault()
 
-        axios.put()
+        axios.put("", this.state.user)
             .then(response =>
                 console.log("Making Chnages!"))
     }
@@ -77,6 +77,9 @@ class UserProfile extends Component {
 
                 <div className="body">
 
+                {/* Should have something that looks like this here:
+                <h2>{user.name}</h2>
+                <h2>{user.username}</h2>  and so on.. */}
                   
                 <Link to="/movies"><li>MCU Movie List</li></Link>    
 

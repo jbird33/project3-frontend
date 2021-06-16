@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import { Link, Route } from "react-router-dom";
 import axios from "axios";
 
@@ -11,18 +11,18 @@ class Movies extends Component {
         }
     }
 
-//----------------------------------------------
+    //----------------------------------------------
 
-componentDidMount = () => {
-    axios.get("")
-    .then(response => {
-        console.log(response)
-        this.setState({
-            movies: response.data
-            // Might be data but have to check response
-        })
-    })
-}
+    componentDidMount = () => {
+        axios.get("")
+            .then(response => {
+                console.log(response)
+                this.setState({
+                    movies: response.data
+                    // Might be data but have to check response
+                })
+            })
+    }
 
 
     render() {
@@ -39,6 +39,18 @@ componentDidMount = () => {
                 </div>
 
                 <div className="body">
+
+                    {/* {this.state.movies.map(movie => {
+                        return (
+                            <div>
+                                <Link to={`/movies/:id`}>
+                                    <img src={movie.image} />
+                                    <h3>{movie.title}</h3>
+                                </Link>
+                            </div>
+                        )
+                    })} */}
+
                     {/* Will have ${movie.id} subbed in for :id below */}
                     <Link to={`/movies/:id`}>Individual Movie Details Here</Link>
                 </div>

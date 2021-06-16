@@ -36,6 +36,7 @@ class SignUp extends Component {
                 console.log("Creating Profile!")
                 console.log(response)
                 // Not sure what below does or where this came from response.user.user.id  
+                //${response.user.user.id} may change depending on the console.log(response)
                 this.props.history.push(`/profile/${response.user.user.id}`)
             })
             .catch(err => {
