@@ -13,7 +13,7 @@ class UserProfile extends Component {
                 username: "",
                 password: "",
                 email: "",
-                movieId: 0
+                movieId: ""
             },
             movies: []
 
@@ -56,72 +56,56 @@ class UserProfile extends Component {
 
     handleDelete = async (event) => {
         await axios.delete(`http://localhost:3001/users/profile/${this.props.match.params.id}`)
-        .then(response => {
-            console.log("Deleting this User")
-            //Redirect to homepage
-            this.props.history.push('/')
-        })
+            .then(response => {
+                console.log("Deleting this User")
+                //Redirect to homepage
+                this.props.history.push('/')
+            })
     }
 
-    render(){
+    render() {
         console.log(this.state.user)
         console.log(this.state.movies)
-        
+        console.log(this.state.user.movieId)
+
         // Below is so I don't have to rewrite this.state every time
         const user = this.state.user;
         const movies = this.state.movies;
-        // const movie = this.state.movies;
-        // const arrId = user.movieId;
-        // console.log(arrId)
-        // console.log(movie)
-        // const movieName = movie[arrId-1]
-        // console.log(movieName)
-        // const movieTitle = movieName.title
-        // console.log(movieTitle)
+
         return (
             <div>
                 <div className="navigation">
                     <nav>
                         <Link to="/">Homepage</Link>
 
-                        <h1>Welcome True Believer: {user.name}! </h1> 
-                        {/* Will have this: {this.props.user.name} inside */}
+
                     </nav>
                 </div>
 
                 <div className="body">
-
-                {/* Should have something that looks like this here: */}
-                <h2>{user.name}</h2>
-                <h2>{user.username}</h2> 
-                <h2>{user.email}</h2>
-                <h2>{user.password}</h2>
-                <h2>{user.movieId}</h2>
-
-           {/* const ID =  user.movieId
-
-           const movieName = movies[ID].title */}
+                    <fieldset>
+                        <legend><h1>Welcome True Believer: {user.name}! </h1></legend><br></br>
+                        <h2>  <label htmlFor="name">Name: </label>{user.name}</h2> <br></br>
+                        <h2>  <label htmlFor="username">Username: </label>{user.username}</h2> <br></br>
+                        <h2>  <label htmlFor="password">Password: </label>{user.password}</h2> <br></br>
+                        <h2>  <label htmlFor="email">Email: </label>{user.email}</h2> <br></br>
+                        <h2>  <label htmlFor="movieID">Favorite MCU Movie: </label> {user.movieId}</h2> <br></br>
+                    </fieldset>
 
 
 
-                <select>
-                    {this.state.movies.map(movie => {
-                        return(
-                            
-                                <option>{movie.title}</option>
-                            
-                        )
-                    })}
-                </select><br></br><br></br>
-                
 
-                <Link to="/movies"><li>MCU Movie List</li></Link>    
 
-                    <EditProfile 
-                    user={this.state.user}
-                    handleChange={this.handleChange}
-                    handleSubmit={this.handleSubmit}
-                    handleDelete={this.handleDelete}
+
+
+                    <Link to="/movies"><li>MCU Movie List</li></Link>
+
+                    <EditProfile
+                        movies={movies}
+                        user={this.state.user}
+                        handleChange={this.handleChange}
+                        handleSubmit={this.handleSubmit}
+                        handleDelete={this.handleDelete}
                     />
 
                 </div>

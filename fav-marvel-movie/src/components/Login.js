@@ -34,9 +34,10 @@ class Login extends Component {
                 //${response.user.user.id} may change depending on the console.log(response) 
                 this.props.history.push(`/profile/${response.data.id}`)
             })
-            // .catch(err => {
-            //     console.log(err)
-            // })
+            .catch(err => {
+                console.log(err)
+                alert("Wrong Username or Password. Try Again")
+            })
     }
 
 
