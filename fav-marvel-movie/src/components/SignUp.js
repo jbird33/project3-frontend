@@ -6,7 +6,7 @@ class SignUp extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            user: {
+            data: {
                 name: "",
                 username: "",
                 password: "",
@@ -19,8 +19,8 @@ class SignUp extends Component {
 
     handleChange = (event) => {
         this.setState(prevState => ({
-            user: {
-                ...prevState.user,
+            data: {
+                ...prevState.data,
                 [event.target.name]: event.target.value
             }
         }))
@@ -31,7 +31,7 @@ class SignUp extends Component {
     handleSubmit = (event) => {
         event.preventDefault()
 
-        axios.post("https://localhost:3001/users/signup", this.state.user)
+        axios.post("http://localhost:3001/users/signup", this.state.user)
             .then(response => {
                 console.log("Creating Profile!")
                 console.log(response)
@@ -39,9 +39,9 @@ class SignUp extends Component {
                 //${response.user.user.id} may change depending on the console.log(response)
                 this.props.history.push(`/profile/${response.user.user.id}`)
             })
-            .catch(err => {
-                console.log(err)
-            })
+            // .catch(err => {
+            //     console.log(err)
+            // })
     }
 //------------------------------------------------------------------
 

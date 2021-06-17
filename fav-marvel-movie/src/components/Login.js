@@ -26,17 +26,17 @@ class Login extends Component {
     handleSubmit = (event) => {
         event.preventDefault()
         // This is a post and not a get to the backend
-        axios.post("https://localhost:3001/users/login", this.state.user)
+        axios.post("http://localhost:3001/users/login", this.state.user)
             .then(response => {
                 console.log("Logged In User!!")
                 console.log(response)
                 // Not sure what below does or where this came from response.user.user.id 
                 //${response.user.user.id} may change depending on the console.log(response) 
-                this.props.history.push(`/profile/${response.user.user.id}`)
+                this.props.history.push(`/profile/${response.data.id}`)
             })
-            .catch(err => {
-                console.log(err)
-            })
+            // .catch(err => {
+            //     console.log(err)
+            // })
     }
 
 
