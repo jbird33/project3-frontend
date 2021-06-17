@@ -22,7 +22,7 @@ class OneMovie extends Component {
 //--------------------------------------------------------
 
 componentDidMount = () => {
-    axios.get()
+    axios.get(`http://localhost:3001/movies/${this.props.match.params.id}`)
     .then(response => 
         this.setState ({
             movie: response.data
@@ -46,9 +46,13 @@ componentDidMount = () => {
 
                 <div className="body">
 
-                    Here is where the movie details are going to go.
+                    <img src={movie.image} />
+                   <h1>{movie.title}</h1> 
+                   <h1>{movie.releaseDate}</h1>
+                   <h1>{movie.director}</h1>
+                   <h1>{movie.rating}</h1>
+                   <h1>{movie.rottenTomatoesScore}</h1>
                 </div>
-
                 
             </div>
         )

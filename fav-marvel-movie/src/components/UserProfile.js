@@ -19,12 +19,13 @@ class UserProfile extends Component {
         }
     }
     //----------------------------------------------------------------
+    //** First thing in the morning!!!! Jeremiah!!! */
     componentDidMount = () => {
-        axios.get()
+        axios.get(`http://localhost:3001/users/profile/${this.props.match.params.id}`)
             .then(response => {
                 console.log(response)
                 this.setState({
-                    user: response.data  // *Hopefully this will be correct
+                    user: response.data.user  // *Hopefully this will be correct
                 })
             })
     }
@@ -44,7 +45,7 @@ class UserProfile extends Component {
     handleSubmit = (event) => {
         event.preventDefault()
 
-        axios.put("", this.state.user)
+        axios.put(`http://localhost:3001/users/profile/${this.props.match.params.id}`, this.state.user)
             .then(response =>
                 console.log("Making Chnages!"))
     }
@@ -52,7 +53,7 @@ class UserProfile extends Component {
     //----------------------------------------------------------------
 
     handleDelete = async (event) => {
-        await axios.delete()
+        await axios.delete(`http://localhost:3001/users/profile/${this.props.match.params.id}`)
         .then(response => {
             console.log("Deleting this User")
             //Redirect to homepage
@@ -70,17 +71,19 @@ class UserProfile extends Component {
                     <nav>
                         <Link to="/">Homepage</Link>
 
-                        <h1>Welcome True Believer: User Name Here! </h1> 
+                        <h1>Welcome True Believer: {user.name}! </h1> 
                         {/* Will have this: {this.props.user.name} inside */}
                     </nav>
                 </div>
 
                 <div className="body">
 
-                {/* Should have something that looks like this here:
+                {/* Should have something that looks like this here: */}
                 <h2>{user.name}</h2>
-                <h2>{user.username}</h2>  and so on.. */}
-                  
+                <h2>{user.username}</h2> 
+                <h2>{user.email}</h2>
+                <h2>{user.password}</h2>
+
                 <Link to="/movies"><li>MCU Movie List</li></Link>    
 
                     <EditProfile 

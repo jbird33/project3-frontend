@@ -16,9 +16,10 @@ const EditProfile = (props) => {
                 <input onChange={props.handleChange} type="text" name="email" placeholder="email" /><br></br>
                 <label htmlFor="favMovie">Favorite Movie: </label>
                 <input onChange={props.handleChange} type="text" name="favMovie" placeholder="favorite movie" /><br></br><br></br>
-                <input type="submit" value="Make Changes" />
+                <input type="submit" value="Make Changes" /><br></br><br></br>
 
             </form>
+            <button onClick={props.handleDelete}>Delete Your Profile</button>
 
         </div>
     )

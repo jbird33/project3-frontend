@@ -6,7 +6,7 @@ class SignUp extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            data: {
+            user: {
                 name: "",
                 username: "",
                 password: "",
@@ -19,8 +19,8 @@ class SignUp extends Component {
 
     handleChange = (event) => {
         this.setState(prevState => ({
-            data: {
-                ...prevState.data,
+            user: {
+                ...prevState.user,
                 [event.target.name]: event.target.value
             }
         }))
@@ -37,7 +37,7 @@ class SignUp extends Component {
                 console.log(response)
                 // Not sure what below does or where this came from response.user.user.id  
                 //${response.user.user.id} may change depending on the console.log(response)
-                this.props.history.push(`/profile/${response.user.user.id}`)
+                this.props.history.push(`/profile/${response.data.id}`)
             })
             // .catch(err => {
             //     console.log(err)

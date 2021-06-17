@@ -14,7 +14,7 @@ class Movies extends Component {
     //----------------------------------------------
 
     componentDidMount = () => {
-        axios.get("")
+        axios.get("http://localhost:3001/movies/movies")
             .then(response => {
                 console.log(response)
                 this.setState({
@@ -40,16 +40,16 @@ class Movies extends Component {
 
                 <div className="body">
 
-                    {/* {this.state.movies.map(movie => {
+                    {this.state.movies.map(movie => {
                         return (
                             <div>
-                                <Link to={`/movies/:id`}>
+                                <Link to={`/movies/${movie.id}`}>
                                     <img src={movie.image} />
                                     <h3>{movie.title}</h3>
                                 </Link>
                             </div>
                         )
-                    })} */}
+                    })}
 
                     {/* Will have ${movie.id} subbed in for :id below */}
                     <Link to={`/movies/:id`}>Individual Movie Details Here</Link>
