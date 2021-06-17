@@ -13,8 +13,9 @@ class UserProfile extends Component {
                 username: "",
                 password: "",
                 email: "",
-                favMovie: ""
-            }
+                movieId: 0
+            },
+            movies: []
 
         }
     }
@@ -25,7 +26,8 @@ class UserProfile extends Component {
             .then(response => {
                 console.log(response)
                 this.setState({
-                    user: response.data.user  // *Hopefully this will be correct
+                    user: response.data.user,  // *Hopefully this will be correct
+                    movies: response.data.movie
                 })
             })
     }
@@ -63,8 +65,19 @@ class UserProfile extends Component {
 
     render(){
         console.log(this.state.user)
+        console.log(this.state.movies)
+        
         // Below is so I don't have to rewrite this.state every time
-        const user = this.state.user
+        const user = this.state.user;
+        const movies = this.state.movies;
+        // const movie = this.state.movies;
+        // const arrId = user.movieId;
+        // console.log(arrId)
+        // console.log(movie)
+        // const movieName = movie[arrId-1]
+        // console.log(movieName)
+        // const movieTitle = movieName.title
+        // console.log(movieTitle)
         return (
             <div>
                 <div className="navigation">
@@ -83,6 +96,24 @@ class UserProfile extends Component {
                 <h2>{user.username}</h2> 
                 <h2>{user.email}</h2>
                 <h2>{user.password}</h2>
+                <h2>{user.movieId}</h2>
+
+           {/* const ID =  user.movieId
+
+           const movieName = movies[ID].title */}
+
+
+
+                <select>
+                    {this.state.movies.map(movie => {
+                        return(
+                            
+                                <option>{movie.title}</option>
+                            
+                        )
+                    })}
+                </select><br></br><br></br>
+                
 
                 <Link to="/movies"><li>MCU Movie List</li></Link>    
 

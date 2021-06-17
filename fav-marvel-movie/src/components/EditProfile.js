@@ -14,7 +14,7 @@ const EditProfile = (props) => {
                 <input onChange={props.handleChange} type="password" name="password" placeholder="password" /><br></br>
                 <label htmlFor="email">Email: </label>
                 <input onChange={props.handleChange} type="text" name="email" placeholder="email" /><br></br>
-                <label htmlFor="favMovie">Favorite Movie: </label>
+                <label htmlFor="movieId">Favorite Movie: </label>
                 <input onChange={props.handleChange} type="text" name="favMovie" placeholder="favorite movie" /><br></br><br></br>
                 <input type="submit" value="Make Changes" /><br></br><br></br>
 
