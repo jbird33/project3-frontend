@@ -5,8 +5,8 @@ import { Link, Route } from "react-router-dom";
 const Home = () => {
     return (
         <div>
-            <div className="navigation">
-                <h1>Welcome to MARVEL Movie Mania!</h1>
+            <div className="navigation" id="home">
+                <h1 className="home-header">Welcome to MARVEL Movie Mania!</h1>
 
                 <ul>
                     <Link to="/login"><li>Login</li></Link>
