@@ -42,9 +42,9 @@ A full stack application where a user can explore the Marvel Cinematic Universe.
 * Google Font - Bangers
 
 ### Wireframe
-![Wireframe 1](./public/wireframe1.png)
-![Wireframe 2](./public/wireframe2.png)
-![Wireframe 3](./public/wireframe3.png)
+![Wireframe 1](./fav-marvel-movie/public/wireframe1.png)
+![Wireframe 2](./fave-marvel-movie/public/wireframe2.png)
+![Wireframe 3](./fave-marvel-movie/public/wireframe3.png)
 
 ### ERD
-![ERD](./public/ERD.png)
+![ERD](./fave-marvel-movie/public/ERD.png)
