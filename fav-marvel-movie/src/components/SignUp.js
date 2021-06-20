@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import marvelgif from '../marvelgif.gif';
 
 class SignUp extends Component {
     constructor(props) {
@@ -48,16 +49,18 @@ class SignUp extends Component {
     render() {
         return (
             <div>
+                <img className="marvel-img" src={marvelgif} alt="marvellogo" />
                 <div className="navigation">
                     <nav>
                         <Link to="/">Homepage</Link>
-                        <h1>Track your Favorite Marvel Movies </h1>
                     </nav>
 
                 </div>
+                        
+                <h1 className="signup-header">Track your Favorite Marvel Movies </h1>
 
-                <div className="body">
-                    <form onSubmit={this.handleSubmit}>
+                <div className="signup-body">
+                    <form className="signup-form" onSubmit={this.handleSubmit}>
                         <fieldset>
                             <legend>Sign Up for Marvel Movie Mania!</legend><br></br>
                             <label htmlFor="name">Name: </label>

@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import avengers1 from "../avengers1.jpg"
+import marvelgif from '../marvelgif.gif';
+
 
 class Login extends Component {
     constructor(props) {
@@ -45,6 +46,7 @@ class Login extends Component {
     render() {
         return (
             <div>
+                <img className="marvel-img" src={marvelgif} alt="marvellogo" />
                 <div className="navigation">
                     <nav>
                         <Link to="/">Homepage</Link>
@@ -64,7 +66,6 @@ class Login extends Component {
                         </fieldset>
 
                     </form>
-                    <img className="login-image" src={avengers1} alt="avengers one" />
 
                 </div>
 

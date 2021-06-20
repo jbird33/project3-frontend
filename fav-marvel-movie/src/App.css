@@ -34,6 +34,8 @@ body {
   font-family: 'Bangers', cursive;
 }
 
+/* Homepage Styling */
+
 #home {
   display: flex;
   flex-direction: row;
@@ -68,7 +70,8 @@ h3 {
 }
 
 .marvel-img {
-  width: 90%;
+  width: 100%;
+  margin-bottom: 15px;
   
 }
 
@@ -77,6 +80,8 @@ h3 {
   flex-direction: column;
   align-items: center;
 }
+
+/* Login Page Styling */
 
 .login-header {
   font-weight: normal;
@@ -96,11 +101,32 @@ h3 {
   align-items: center;
 }
 
-.login-image {
-  width: 80%;
-}
-
 .login-form {
   background-color: #efa53a;
+  margin-bottom: 20px;
+}
+
+/* Sign Up Styling */
+
+.signup-header {
+  font-weight: normal;
+  background-color: #d93d27;
+  color: white;
+  text-align: center;
+  font-size: 42px;
+  padding: 10px;
+  border: rgb(54, 26, 41) 20px solid;
+  border-style: ridge;
+}
+
+.signup-body {
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signup-form {
+  background-color: #924f9e;
   margin-bottom: 20px;
 }
