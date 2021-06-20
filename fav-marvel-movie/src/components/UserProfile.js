@@ -73,40 +73,33 @@ class UserProfile extends Component {
         const movies = this.state.movies;
 
         return (
-            <div>
-                <div className="navigation">
-                    <nav>
-                        <Link to="/">Homepage</Link>
+            <div className="profile-page">
 
-
-                    </nav>
+                <div className="navigation" id="profile-nav">
+                        <Link to="/"><h3>Homepage</h3></Link>
+                        <Link to="/movies"><h3>MCU Movie List</h3></Link>
                 </div>
 
-                <div className="body">
-                    <fieldset>
-                        <legend><h1>Welcome True Believer: {user.name}! </h1></legend><br></br>
+                <div className="profile-body">
+                    <h1 className="profile-header">Welcome True Believer: {user.name}! </h1>
+                    
+                    <form className="profile-form">
+                        <legend><h1>Your Profile</h1></legend><br></br>
                         <h2>  <label htmlFor="name">Name: </label>{user.name}</h2> <br></br>
                         <h2>  <label htmlFor="username">Username: </label>{user.username}</h2> <br></br>
                         <h2>  <label htmlFor="password">Password: </label>{user.password}</h2> <br></br>
                         <h2>  <label htmlFor="email">Email: </label>{user.email}</h2> <br></br>
                         <h2>  <label htmlFor="movieID">Favorite MCU Movie: </label> {user.movieId}</h2> <br></br>
-                    </fieldset>
-
-
-
-
-
-
-
-                    <Link to="/movies"><li>MCU Movie List</li></Link>
-
-                    <EditProfile
-                        movies={movies}
-                        user={this.state.user}
-                        handleChange={this.handleChange}
-                        handleSubmit={this.handleSubmit}
-                        handleDelete={this.handleDelete}
-                    />
+                    </form>
+                    <div className="profile-edit">
+                        <EditProfile
+                            movies={movies}
+                            user={this.state.user}
+                            handleChange={this.handleChange}
+                            handleSubmit={this.handleSubmit}
+                            handleDelete={this.handleDelete}
+                        />
+                    </div>
 
                 </div>
             </div>

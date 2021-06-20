@@ -4,7 +4,7 @@ const EditProfile = (props) => {
     return (
         <div>
             <h1>Edit your Profile Here</h1>
-            <form onSubmit={props.handleSubmit}>
+            <form className="edit-form" onSubmit={props.handleSubmit}>
                 {/* Need to add this when time: value={props.user.name} into each input */}
                 <label htmlFor="name">Name: </label>
                 <input onChange={props.handleChange} type="text" name="name" placeholder="name" /><br></br>

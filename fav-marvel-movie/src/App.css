@@ -34,6 +34,14 @@ body {
   font-family: 'Bangers', cursive;
 }
 
+h1 {
+  font-weight: normal;
+}
+
+h2 {
+  font-weight: normal;
+}
+
 /* Homepage Styling */
 
 #home {
@@ -129,4 +137,49 @@ h3 {
 .signup-form {
   background-color: #924f9e;
   margin-bottom: 20px;
+}
+
+/* Profile Page Styling */
+
+#profile-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-weight: normal;
+    font-size: 20px;
+}
+
+.profile-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-header {
+  font-weight: normal;
+  background-color: #d93d27;
+  color: white;
+  text-align: center;
+  font-size: 42px;
+  padding: 10px;
+  border: rgb(54, 26, 41) 20px solid;
+  border-style: ridge;
+}
+
+.profile-form {
+  background-color: #efa53a;
+  border: #924f9e 10px solid;
+  border-style: ridge;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.profile-edit {
+  background-color: #924f9e;
+  border: #efa53a 10px solid;
+  border-style: ridge;
+  padding: 10px;
+}
+
+.edit-form {
+  font-size: 25px;
 }
