@@ -43,8 +43,8 @@ A full stack application where a user can explore the Marvel Cinematic Universe.
 
 ### Wireframe
 ![Wireframe 1](./fav-marvel-movie/public/wireframe1.png)
-![Wireframe 2](./fave-marvel-movie/public/wireframe2.png)
-![Wireframe 3](./fave-marvel-movie/public/wireframe3.png)
+![Wireframe 2](./fav-marvel-movie/public/wireframe2.png)
+![Wireframe 3](./fav-marvel-movie/public/wireframe3.png)
 
 ### ERD
-![ERD](./fave-marvel-movie/public/ERD.png)
+![ERD](./fav-marvel-movie/public/ERD.png)
