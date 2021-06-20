@@ -36,22 +36,18 @@ componentDidMount = () => {
         return (
             <div>
                 <div className="navigation">
-                    <nav>
-                        <Link to="/">Homepage</Link>
-
-                        <h1>Single Movie Details!</h1>
-
-                    </nav>
+                    <Link to="/">Homepage</Link>
                 </div>
+                        
+                <h1 className="onemovie-header">Single Movie Details!</h1>
 
-                <div className="body">
-
-                    <img src={movie.image} />
-                   <h1>{movie.title}</h1> 
-                   <h1>{movie.releaseDate}</h1>
-                   <h1>{movie.director}</h1>
-                   <h1>{movie.rating}</h1>
-                   <h1>{movie.rottenTomatoesScore}</h1>
+                <div className="onemovie-body">
+                    <img className="movie-image" src={movie.image} />
+                    <h1>Title:  {movie.title}</h1> 
+                    <h1>Release Date:  {movie.releaseDate}</h1>
+                    <h1>Director:  {movie.director}</h1>
+                    <h1>MPA Rating:  {movie.rating}</h1>
+                    <h1>Rotten Tomatoes Score:  {movie.rottenTomatoesScore}</h1>
                 </div>
                 
             </div>

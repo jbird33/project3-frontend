@@ -30,29 +30,25 @@ class Movies extends Component {
         return (
             <div>
                 <div className="navigation">
-                    <nav>
-                        <Link to="/">Homepage</Link>
-
-                        <h1>List of movies </h1>
-
-                    </nav>
+                    <Link to="/">Homepage</Link>
                 </div>
+                
+                <h1 className="movies-header">List of movies</h1>
 
-                <div className="body">
+                <div className="movies-body">
 
                     {this.state.movies.map(movie => {
                         return (
-                            <div>
+                            <div className="each-movie">
                                 <Link to={`/movies/${movie.id}`}>
                                     <img src={movie.image} />
-                                    <h3>{movie.title}</h3>
+                                    {/* <h3>{movie.title}</h3> */}
                                 </Link>
                             </div>
                         )
                     })}
 
-                    {/* Will have ${movie.id} subbed in for :id below */}
-                    <Link to={`/movies/:id`}>Individual Movie Details Here</Link>
+               
                 </div>
             </div>
         )
