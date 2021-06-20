@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+# Marvel Mania Movie App || Jeremiah Miller and Margie Ball
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Description
+A full stack application where a user can explore the Marvel Cinematic Universe. They can create a profile, choose a favorite Marvel movie and review the details of each movie.
 
-## Available Scripts
+### Technologies Used
+* Express
+* Node JS
+* Sequelize
+* React
+* Google Chrome
+* PostgreSQL
 
-In the project directory, you can run:
+### Existing Features
+* Users can sign up for an account or log into their existing account
+* Users can update account information, add a favorite movie or delte their account
+* Users can view list of Marvel movies and click on each movie to view details
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Installation Instructions
+1. Fork and clone both front end and back end repositories
+2. Install dependencies
+    * Front End
+        - Axios
+        - React-Router-DOM
+    * Back End
+        - Express
+        - Body-Parser
+        - Sequelize-CLI
+        - Sequelize
+        - PG
+3. In config.json file of back end change username and password to correct account
+4. Set up database for marvel_dev in PostgreSQL
+5. Start up server on both files
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Resources
+* GA Instructors
+* GA Lesson Repositories
+* [Add Column to Table](https://dev.to/nedsoft/add-new-fields-to-existing-sequelize-migration-3527)
+* [HTML For](https://stackoverflow.com/questions/59924585/im-getting-error-using-laravel-and-react-invalid-dom-property-for-did-you-m)
+* [Color Palette](https://www.schemecolor.com/avengers-infinity-war-theme-colors.php)
+* Google Font - Bangers
 
-### `npm test`
+### Wireframe
+![Wireframe 1](./public/wireframe1.png)
+![Wireframe 2](./public/wireframe2.png)
+![Wireframe 3](./public/wireframe3.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### ERD
+![ERD](./public/ERD.png)
