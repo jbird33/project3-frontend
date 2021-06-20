@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import avengers1 from "../avengers1.jpg"
 
 class Login extends Component {
     constructor(props) {
@@ -47,14 +48,14 @@ class Login extends Component {
                 <div className="navigation">
                     <nav>
                         <Link to="/">Homepage</Link>
-                        <h1>Start Viewing Your Movie Mania Here!</h1>
                     </nav>
-
                 </div>
+                
+                <h1 className="login-header">Start Viewing Your Movie Mania Here!</h1>
 
-                <div className="body">
+                <div className="login-body">
 
-                    <form onSubmit={this.handleSubmit}>
+                    <form className="login-form" onSubmit={this.handleSubmit}>
                         <fieldset>
                             <legend>Login to See Your Favorite Movie!</legend><br></br>
                             <label htmlFor="username">Username: </label><input onChange={this.handleChange} type="text" name="username" placeholder="username" /> <br></br>
@@ -63,6 +64,7 @@ class Login extends Component {
                         </fieldset>
 
                     </form>
+                    <img className="login-image" src={avengers1} alt="avengers one" />
 
                 </div>
 

@@ -18,6 +18,7 @@ li {
   font-size: 30px;
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
 
 
 }
@@ -39,7 +40,7 @@ body {
   justify-content: space-around;
   font-weight: normal;
   font-size: 20px;
-  
+
 
 }
 
@@ -75,4 +76,31 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.login-header {
+  font-weight: normal;
+  background-color: #d93d27;
+  color: white;
+  text-align: center;
+  font-size: 42px;
+  padding: 10px;
+  border: rgb(54, 26, 41) 20px solid;
+  border-style: ridge;
+}
+
+.login-body {
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-image {
+  width: 80%;
+}
+
+.login-form {
+  background-color: #efa53a;
+  margin-bottom: 20px;
 }
