@@ -1,5 +1,8 @@
 # Marvel Mania Movie App || Jeremiah Miller and Margie Ball
 
+### Link to App
+http://localhost:3000/
+
 ### Description
 A full stack application where a user can explore the Marvel Cinematic Universe. They can create a profile, choose a favorite Marvel movie and review the details of each movie.
 
@@ -13,7 +16,7 @@ A full stack application where a user can explore the Marvel Cinematic Universe.
 
 ### Existing Features
 * Users can sign up for an account or log into their existing account
-* Users can update account information, add a favorite movie or delte their account
+* Users can update account information, add a favorite movie or delete their account
 * Users can view list of Marvel movies and click on each movie to view details
 
 ### Planned Features
