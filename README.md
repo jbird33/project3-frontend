@@ -16,6 +16,11 @@ A full stack application where a user can explore the Marvel Cinematic Universe.
 * Users can update account information, add a favorite movie or delte their account
 * Users can view list of Marvel movies and click on each movie to view details
 
+### Planned Features
+* User should have ability to filter by movie rating, director, or Rotten Tomatoes Score
+* Possibly have dropdown for movie choices
+* Some sort of direction to the MCU Movie List button/link
+
 
 ### Installation Instructions
 1. Fork and clone both front end and back end repositories
